@@ -11,9 +11,9 @@ document.querySelector(".check").addEventListener("click", function () {
 
   if (guess == false) {
     document.querySelector(".message").textContent =
-    "Enter a guess between 1 and 20!!";
+      "⚠️Enter a guess between 1 and 20!!";
   } else if (guess === secret_num) {
-    document.querySelector(".message").textContent = "Correct guess!!";
+    document.querySelector(".message").textContent = "🎆Correct guess!!";
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.querySelector(".number").style.width = "99%";
     document.querySelector(".number").textContent = secret_num;
@@ -24,22 +24,22 @@ document.querySelector(".check").addEventListener("click", function () {
       document.querySelector(".highscore").textContent = score;
     }
   } else if (guess > secret_num && guess <= 20) {
-    document.querySelector(".message").textContent = "Too High!!";
+    document.querySelector(".message").textContent = "📈Too High!!";
     score--;
     document.querySelector(".score").textContent = score;
     if (score === 0) {
-      document.querySelector(".message").textContent = "You lost the game!!";
+      document.querySelector(".message").textContent = "😢You lost the game!!";
       document.querySelector("body").style.backgroundColor = "#E20101";
       document.querySelector(".number").style.width = "30rem";
       document.querySelector(".check").style.display = "none";
       document.querySelector(".number").textContent = secret_num;
     }
   } else if (guess < secret_num && guess >= 1) {
-    document.querySelector(".message").textContent = "Too Low!!";
+    document.querySelector(".message").textContent = "📉Too Low!!";
     score--;
     document.querySelector(".score").textContent = score;
     if (score === 0) {
-      document.querySelector(".message").textContent = "You lost the game!!";
+      document.querySelector(".message").textContent = "😢You lost the game!!";
       document.querySelector("body").style.backgroundColor = "#E20101";
       document.querySelector(".number").style.width = "30rem";
       document.querySelector(".check").style.display = "none";
@@ -47,7 +47,7 @@ document.querySelector(".check").addEventListener("click", function () {
     }
   } else if (guess < 1 || guess > 20) {
     document.querySelector(".message").textContent =
-    "Enter a guess between 1 and 20!!";
+      "Enter a guess between 1 and 20!!";
   }
 });
 
